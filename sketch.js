@@ -109,7 +109,7 @@ function setup(){
 
   rectMode(CENTER);
   ellipseMode(RADIUS);
-  imageMode(CENTER);
+  
   textSize(50);
   
 }
@@ -123,9 +123,12 @@ function draw()
   rope1.show();
   rope2.show();
   //fruit.show();
+  push();
+  imageMode(CENTER);
   if(fruit!=null){
     image(melon,fruit.position.x,fruit.position.y,50,50);
   }
+  pop();
   //console.log(fruit.position.y)
   Engine.update(engine);
   if(colision(fruit,bunny)==true){
