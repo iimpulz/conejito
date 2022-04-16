@@ -137,7 +137,7 @@ function draw()
     eatSound.play();
   }
 
-  if(fruit!=null && fruit.position.y>610){
+  if(fruit!=null && fruit.position.y>canH+20){
     bunny.changeAnimation("crying");
     music.stop();
     sadSound.setVolume(0.5);
